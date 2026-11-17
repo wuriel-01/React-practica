@@ -1,0 +1,197 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #11111b;
+}
+
+button {
+    font-family: inherit;
+}
+
+.calculadora-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: radial-gradient(circle at top, #29234c, #11111b 65%);
+}
+
+/* CALCULADORA */
+
+.calculadora {
+    width: 100%;
+    max-width: 370px;
+    padding: 25px;
+    border: 1px solid #343149;
+    border-radius: 22px;
+    background-color: #1c1b2b;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ENCABEZADO */
+
+.calculadora-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 25px;
+}
+
+.calculadora-icono {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #352b65;
+    color: #b5a5ff;
+    font-size: 25px;
+}
+
+.calculadora-header h1 {
+    color: #ffffff;
+    font-size: 19px;
+    margin: 0 0 5px;
+}
+
+.calculadora-header p {
+    color: #9693aa;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* DISPLAY */
+
+.display {
+    min-height: 125px;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background-color: #11111b;
+    border: 1px solid #343149;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.operacion {
+    color: #9693aa;
+    font-size: 17px;
+    min-height: 22px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.resultado {
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: bold;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.error {
+    color: #ff6b81;
+    font-size: 11px;
+    min-height: 14px;
+}
+
+/* TECLADO */
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.teclado button {
+    height: 58px;
+    border: none;
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-numero {
+    background-color: #2a293b;
+    color: #ffffff;
+}
+
+.btn-numero:hover {
+    background-color: #3a3850;
+    transform: translateY(-2px);
+}
+
+.btn-operacion {
+    background-color: #352b65;
+    color: #b5a5ff;
+}
+
+.btn-operacion:hover,
+.btn-operacion.seleccionada {
+    background-color: #6554c0;
+    color: #ffffff;
+}
+
+.btn-borrar {
+    grid-column: span 2;
+    background-color: #472832;
+    color: #ff8b9b;
+}
+
+.btn-borrar:hover {
+    background-color: #633442;
+}
+
+.btn-igual {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #7865e8, #5945b5);
+    color: #ffffff;
+}
+
+.btn-igual:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+
+.calculadora-footer {
+    text-align: center;
+    color: #77748c;
+    font-size: 11px;
+    margin-top: 22px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 400px) {
+    .calculadora {
+        padding: 18px;
+    }
+
+    .teclado {
+        gap: 8px;
+    }
+
+    .teclado button {
+        height: 53px;
+    }
+}

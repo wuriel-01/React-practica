@@ -1,0 +1,191 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.convertidor-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    background: linear-gradient(135deg, #141e46, #293b75, #6554c0);
+}
+
+/* TARJETA PRINCIPAL */
+
+.convertidor-card {
+    width: 100%;
+    max-width: 480px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ENCABEZADO */
+
+.convertidor-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icono-temperatura {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    border-radius: 18px;
+    background-color: #eeecff;
+    font-size: 32px;
+}
+
+.subtitulo {
+    color: #6554c0;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.convertidor-header h1 {
+    color: #172b4d;
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.convertidor-header p {
+    color: #7a869a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* INPUT */
+
+.temperatura-input,
+.selector-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.temperatura-input label,
+.selector-group label {
+    color: #344563;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.temperatura-input input,
+.selector-group select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #dfe1e6;
+    border-radius: 8px;
+    background-color: #fafbfc;
+    color: #172b4d;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.temperatura-input input:focus,
+.selector-group select:focus {
+    border-color: #6554c0;
+    box-shadow: 0 0 0 3px rgba(101, 84, 192, 0.12);
+}
+
+/* SELECTORES */
+
+.selectores {
+    margin-top: 23px;
+}
+
+.flecha-conversion {
+    text-align: center;
+    font-size: 23px;
+    color: #6554c0;
+    padding: 10px;
+}
+
+/* RESULTADO */
+
+.resultado-container {
+    background: linear-gradient(135deg, #eeecff, #f4f2ff);
+    border: 1px solid #e0dcff;
+    border-radius: 12px;
+    padding: 22px;
+    margin-top: 28px;
+    text-align: center;
+}
+
+.resultado-container span {
+    color: #6554c0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.resultado-container h2 {
+    color: #45358f;
+    font-size: 34px;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.resultado-container p {
+    color: #7a869a;
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* BOTÓN */
+
+.btn-limpiar {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: 1px solid #dfe1e6;
+    border-radius: 8px;
+    background-color: white;
+    color: #44546f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-limpiar:hover {
+    background-color: #f0efff;
+    color: #6554c0;
+    border-color: #6554c0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+    .convertidor-card {
+        padding: 25px 20px;
+    }
+
+    .convertidor-header h1 {
+        font-size: 22px;
+    }
+
+    .resultado-container h2 {
+        font-size: 28px;
+    }
+}
